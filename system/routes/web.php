@@ -52,16 +52,6 @@ Route::put('admin/produk/update/{produk}', [ProdukController::class, 'update']);
 // Route::put('admin/user/update/{user}', [UserController::class, 'update']);
 // Route::delete('admin/user/{user}', [UserController::class, 'destroy']);
 
-// Route::get('login', [AuthController::class, 'showlogin'] );
-// Route::post('login', [AuthController::class, 'loginProcess'] );
-// Route::post('logout', [AuthController::class, 'logout'] );
-
-
-// Route::get('/contact',  [IndexController::class, 'showcontact']);
-// Route::get('/fruits',  [IndexController::class, 'fruits']);
-// Route::get('/about',  [IndexController::class, 'showabout']);
-// Route::get('/blog',  [IndexController::class, 'showblog']);
-
 
 // CRUD
 Route::prefix('admin')->middleware('auth')->group(function(){
@@ -76,4 +66,7 @@ Route::get('login', [AuthController::class, 'showlogin']) -> name('login');
 Route::post('login', [AuthController::class, 'loginProcess']);
 Route::get('logout', [AuthController::class, 'logout']);
 
-
+Route::get('/contact',  [IndexController::class, 'showcontact']);
+Route::get('/products',  [IndexController::class, 'showproducts']);
+Route::get('/about',  [IndexController::class, 'showabout']);
+Route::get('/client',  [IndexController::class, 'showclient']);

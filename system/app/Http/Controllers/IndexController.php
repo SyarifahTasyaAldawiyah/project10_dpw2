@@ -19,13 +19,13 @@ class indexController extends Controller
 
 	function showproducts(){
 
-		return view('fruits');
+		return view('products');
 
 	}
 
 	function showclient(){
 
-		return view('blog');
+		return view('client');
 
 	}
 
